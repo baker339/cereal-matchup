@@ -93,7 +93,6 @@
 </script>
 
 <main>
-	<!-- <h1>Ultimate Cereal Matchup!</h1> -->
     <img src="assets/SCSLogo.png" alt="logo" style={{width: "125%"}}/>
 	<h4>Choose your favorite below!</h4>
 </main>
@@ -140,13 +139,6 @@
 			max-width: 200px;
 		}
 	
-		h1 {
-			color: #ff3e00;
-			text-transform: uppercase;
-			font-size: 4em;
-			font-weight: 100;
-		}
-	
 		h4 {
 			color: #333;
 			text-transform: uppercase;
@@ -171,14 +163,6 @@
 	}
 
 	@media only screen and ( max-width: 1079px) {
-
-		.matchup {
-			/* display: flex; */
-		}
-	
-		.matchup-item {
-			/* flex: 0; */
-		}
 	
 		.versus {
 			flex: 0;
@@ -190,13 +174,6 @@
 	
 		.versus img {
 			max-width: 10%;
-		}
-	
-		h1 {
-			color: #ff3e00;
-			text-transform: uppercase;
-			font-size: 4em;
-			font-weight: 100;
 		}
 	
 		h4 {

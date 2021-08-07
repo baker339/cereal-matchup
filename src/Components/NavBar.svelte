@@ -5,7 +5,7 @@
 <header>
     <div class="navbar">
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#/">Home</a></li>
             <li><a href="#/results">Results</a></li>
         </ul>
     </div>
