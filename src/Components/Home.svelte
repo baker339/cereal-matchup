@@ -105,7 +105,6 @@
 			<h4>{cerealOneName}</h4>
 		</div>
 		<div class="versus">
-			<!-- Versus -->
             <img src="https://www.pinclipart.com/picdir/big/535-5355617_versus-battle-transparent-png-mortal-kombat-vs-logo.png" alt="versus image"/>
 		</div>
 		<div class="matchup-item" on:click={incrementCerealTwo}>
@@ -116,74 +115,115 @@
 </body>
 
 <style>
-	main, body {
-		text-align: center;
-		padding: 1em;
-		/* max-width: 240px; */
-		margin: 0 auto;
-	}
 
-	@media only screen and (max-device-width: 480px) {
+	@media only screen and ( min-width: 1080px) {
+
 		.matchup {
+			display: flex;
 			padding: 10px;
 			justify-content: space-around;
 		}
-	}
-
-	.matchup {
-		display: flex;
-		padding: 10px;
-		justify-content: space-around;
-	}
-
-	.matchup-item {
-		flex: 0;
-	}
-
-	.versus {
-		flex: 0;
-		justify-content: space-around;
-		align-self: center;
-		font-size: large;
-		font-weight: bold;
-	}
-
-    .versus img {
-        max-width: 200px;
-    }
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-    h4 {
-		color: #333;
-		text-transform: uppercase;
-		font-weight: 100;
-	}
-
-	img{
-		max-height: 400px;
-		width: 400px;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
+	
+		.matchup-item {
+			flex: 0;
+		}
+	
+		.versus {
+			flex: 0;
+			justify-content: space-around;
+			align-self: center;
+			font-size: large;
+			font-weight: bold;
+		}
+	
+		.versus img {
+			max-width: 200px;
+		}
+	
+		h1 {
+			color: #ff3e00;
+			text-transform: uppercase;
+			font-size: 4em;
+			font-weight: 100;
+		}
+	
+		h4 {
+			color: #333;
+			text-transform: uppercase;
+			font-weight: 100;
+		}
+	
+		img{
+			max-height: 400px;
+			width: 400px;
+		}
+	
+		.matchup-item img:hover{ 
+			animation: shake 500ms infinite;
+			animation-timing-function: linear;   
+		}
+	
+		@keyframes shake {
+			0% { transform: rotate(0.5deg) scale(1.05); }
+			50% { transform: rotate(-0.5deg) scale(1.05); }
+			100% { transform: rotate(0.5deg) scale(1.05); }
 		}
 	}
 
-    .matchup-item img:hover{ 
-        animation: shake 500ms infinite;
-        animation-timing-function: linear;   
-    }
+	@media only screen and ( max-width: 1079px) {
 
-    @keyframes shake {
-        0% { transform: rotate(0.5deg) scale(1.05); }
-        50% { transform: rotate(-0.5deg) scale(1.05); }
-        100% { transform: rotate(0.5deg) scale(1.05); }
-    }
+		.matchup {
+			/* display: flex; */
+		}
+	
+		.matchup-item {
+			/* flex: 0; */
+		}
+	
+		.versus {
+			flex: 0;
+			justify-content: space-around;
+			align-self: center;
+			font-size: large;
+			font-weight: bold;
+		}
+	
+		.versus img {
+			max-width: 10%;
+		}
+	
+		h1 {
+			color: #ff3e00;
+			text-transform: uppercase;
+			font-size: 4em;
+			font-weight: 100;
+		}
+	
+		h4 {
+			color: #333;
+			text-transform: uppercase;
+			font-weight: 100;
+		}
+	
+		img{
+			max-width: 75%;
+			height: auto;
+		}
+
+		.matchup-item img{ 
+			max-width: 40%; 
+		}
+	
+		.matchup-item img:hover{ 
+			animation: shake 500ms infinite;
+			animation-timing-function: linear;   
+		}
+	
+		@keyframes shake {
+			0% { transform: rotate(0.5deg) scale(1.05); }
+			50% { transform: rotate(-0.5deg) scale(1.05); }
+			100% { transform: rotate(0.5deg) scale(1.05); }
+		}
+	}
+
 </style>
