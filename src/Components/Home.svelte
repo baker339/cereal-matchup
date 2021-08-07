@@ -123,6 +123,13 @@
 		margin: 0 auto;
 	}
 
+	@media only screen and (max-device-width: 480px) {
+		.matchup {
+			padding: 10px;
+			justify-content: space-around;
+		}
+	}
+
 	.matchup {
 		display: flex;
 		padding: 10px;
