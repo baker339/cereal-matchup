@@ -95,21 +95,34 @@
 <main>
     <img src="assets/SCSLogo.png" alt="logo" style={{width: "125%"}}/>
 	<h4>Choose your favorite below!</h4>
+	
 </main>
 
 <body>
 	<div class="matchup">
+		{#if cerealOneName}
 		<div class="matchup-item" on:click={incrementCerealOne}>
 			<img src={cerealOneImage} alt={cerealOneName + " box"}/>
 			<h4>{cerealOneName}</h4>
 		</div>
+		{:else}
+		<div class="matchup-item">
+			<img src="assets/CerealPour.gif" alt="gif" />
+		</div>
+		{/if}
 		<div class="versus">
             <img src="https://www.pinclipart.com/picdir/big/535-5355617_versus-battle-transparent-png-mortal-kombat-vs-logo.png" alt="versus image"/>
 		</div>
+		{#if cerealTwoName}
 		<div class="matchup-item" on:click={incrementCerealTwo}>
 			<img src={cerealTwoImage} alt={cerealTwoName + " box"}/>
 			<h4>{cerealTwoName}</h4>
 		</div>
+		{:else}
+		<div class="matchup-item">
+			<img src="assets/CerealPour.gif" alt="gif" />
+		</div>
+		{/if}
 	</div>
 </body>
 
