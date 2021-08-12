@@ -57,6 +57,10 @@
 			{/each}
 		</table>
 	</div>
+	{:else}
+		<div class="matchup-item">
+			<img src="assets/CerealPour.gif" alt="gif" />
+		</div>
 	{/if}
 </div>
 
