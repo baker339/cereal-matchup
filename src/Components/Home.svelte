@@ -88,6 +88,8 @@
 			opponentName: cerealOneName, 
 			created: Date.now() });
 		cerealTwoCount += 1;
+		cerealOneName = null;
+		cerealTwoName = null;
 		getCereals();
 	}
 </script>
@@ -100,7 +102,7 @@
 
 <body>
 	<div class="matchup">
-		{#if cerealOneName}
+		{#if cerealOneName && cerealTwoName}
 		<div class="matchup-item" on:click={incrementCerealOne}>
 			<img src={cerealOneImage} alt={cerealOneName + " box"}/>
 			<h4>{cerealOneName}</h4>
@@ -113,7 +115,7 @@
 		<div class="versus">
             <img src="https://www.pinclipart.com/picdir/big/535-5355617_versus-battle-transparent-png-mortal-kombat-vs-logo.png" alt="versus image"/>
 		</div>
-		{#if cerealTwoName}
+		{#if cerealOneName && cerealTwoName}
 		<div class="matchup-item" on:click={incrementCerealTwo}>
 			<img src={cerealTwoImage} alt={cerealTwoName + " box"}/>
 			<h4>{cerealTwoName}</h4>
