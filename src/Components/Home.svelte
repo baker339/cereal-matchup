@@ -92,6 +92,12 @@
 		cerealTwoName = null;
 		getCereals();
 	}
+
+	function skipMatchup() {
+		cerealOneName = null;
+		cerealTwoName = null;
+		getCereals();
+	}
 </script>
 
 <main>
@@ -125,6 +131,9 @@
 			<img src="assets/CerealPour.gif" alt="gif" />
 		</div>
 		{/if}
+	</div>
+	<div class="skip-button">
+		<button on:click={skipMatchup}>Skip</button>
 	</div>
 </body>
 
@@ -175,6 +184,18 @@
 			50% { transform: rotate(-0.5deg) scale(1.05); }
 			100% { transform: rotate(0.5deg) scale(1.05); }
 		}
+
+		.skip-button button {
+			background-color: #ff3e00;
+			color:white;
+			border-radius: 10px;
+			width: 10%;
+			height: 3%;
+		}
+
+		.skip-button button:hover {
+			background-color: #ce3705;
+		}
 	}
 
 	@media only screen and ( max-width: 1079px) {
@@ -215,6 +236,18 @@
 			0% { transform: rotate(0.5deg) scale(1.05); }
 			50% { transform: rotate(-0.5deg) scale(1.05); }
 			100% { transform: rotate(0.5deg) scale(1.05); }
+		}
+
+		.skip-button button {
+			background-color: #ff3e00;
+			color:white;
+			border-radius: 10px;
+			width: 10%;
+			height: 3%;
+		}
+
+		.skip-button button:hover {
+			background-color: #ce3705;
 		}
 	}
 
